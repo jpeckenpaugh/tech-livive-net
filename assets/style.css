@@ -241,6 +241,60 @@ ul.author-list li:last-child {
   font-size: 0.8125rem;
 }
 
+.tagline {
+  margin: 1rem 0 0;
+  font-size: 1.0625rem;
+  color: var(--pico-color);
+}
+
+.about {
+  margin-top: 1rem;
+}
+
+.about p {
+  color: var(--pico-color);
+}
+
+.profile-field {
+  margin-top: 1.5rem;
+}
+
+.profile-field h3 {
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pico-muted-color);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  padding: 0.3rem 0.7rem;
+  font-size: 0.8125rem;
+  color: var(--pico-color);
+  background: var(--pico-code-background-color);
+  border-radius: 999px;
+}
+
+.joined {
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: var(--pico-muted-color);
+}
+
+.persona-note {
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  font-style: italic;
+  color: var(--pico-muted-color);
+}
+
 footer.site {
   margin-top: 4rem;
   padding-top: 1.5rem;

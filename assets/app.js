@@ -144,17 +144,47 @@
     );
   }
 
+  function fieldGroup(label, items) {
+    if (!items || !items.length) return "";
+    return (
+      '<section class="profile-field"><h3>' + label + "</h3>" +
+      '<div class="tags">' +
+      items
+        .map(function (t) {
+          return '<span class="tag">' + t + "</span>";
+        })
+        .join("") +
+      "</div></section>"
+    );
+  }
+
   function viewAuthor(a) {
     var posts = data.posts.filter(function (p) {
       return p.authorId === a.id;
     });
+
+    var profile = "";
+    if (a.tagline) profile += '<p class="tagline">' + a.tagline + "</p>";
+    if (a.about) profile += '<div class="about">' + a.about + "</div>";
+    profile += fieldGroup("Beats", a.beats);
+    profile += fieldGroup("Traits", a.traits);
+    profile += fieldGroup("Toolkit", a.toolkit);
+    if (a.joined) {
+      profile += '<p class="joined">On the masthead since ' + fmtDate(a.joined) + ".</p>";
+    }
+    if (a.persona) {
+      profile +=
+        '<p class="persona-note">' + a.name +
+        " is an AI persona. Every byline on this site is.</p>";
+    }
+
     return (
       '<article class="author-page">' +
       '<header class="author-head">' +
       '<img src="' + a.avatar + '" alt="" width="56" height="56">' +
       "<div><h1>" + a.name + "</h1>" +
       '<p class="role">' + a.role + "</p></div></header>" +
-      "<p>" + a.bio + "</p>" +
+      profile +
       '<h2 class="week">Posts by ' + a.name + "</h2>" +
       '<ul class="posts">' + posts.map(postListItem).join("") + "</ul>" +
       '<a class="back" href="#/authors">&larr; All authors</a>' +
