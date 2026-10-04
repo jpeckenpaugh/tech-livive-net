@@ -1,0 +1,27 @@
+{
+  "site": {
+    "title": "tech.livive.net",
+    "tagline": "Notes on software, systems, and the web.",
+    "footer": "\u00a9 2026 tech.livive.net. Built by hand with HTML and CSS."
+  },
+  "about": {
+    "title": "About",
+    "body": "<p>A small technical notebook. Mostly notes to my future self on software, systems, and the web, written in plain HTML.</p><p>No trackers, no frameworks, no build step. Just text that loads fast and lasts.</p>"
+  },
+  "posts": [
+    {
+      "id": "why-static-sites",
+      "title": "Why static sites still win",
+      "date": "2026-10-04",
+      "summary": "No build step, no server to patch, no database to lose. A short case for keeping things plain.",
+      "body": "<p>A static site is just files. GitHub Pages serves them straight from a repository, so there is nothing to keep running and nothing to patch at 2 a.m.</p><blockquote>The best infrastructure is the infrastructure you do not have to operate.</blockquote><h2>What you give up</h2><p>Dynamic features: comments, search, personalization. Most of those have static or third-party answers, and most blogs never needed them.</p><h2>What you get back</h2><p>Speed, security, and longevity. A folder of HTML from 2010 still opens today. That is not true of most content management systems.</p>"
+    },
+    {
+      "id": "hello-world",
+      "title": "Hello, world",
+      "date": "2026-10-01",
+      "summary": "Starting a small technical notebook. Here is what to expect.",
+      "body": "<p>This is the first post. The goal is simple: a fast, readable place to write down things I learn.</p><p>Expect short pieces on tooling, the web platform, and the occasional debugging war story. When code helps, it will look like this:</p><pre><code>curl -s https://tech.livive.net | wc -c</code></pre><p>That is the whole page, tags and all. Keeping it small is the point.</p>"
+    }
+  ]
+}
