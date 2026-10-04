@@ -43,7 +43,50 @@ header.site nav a:hover {
 
 .intro {
   color: var(--pico-muted-color);
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
+}
+
+.chips button {
+  margin: 0;
+  padding: 0.3rem 0.75rem;
+  width: auto;
+  font-size: 0.8125rem;
+  line-height: 1.4;
+  color: var(--pico-muted-color);
+  background: transparent;
+  border: 1px solid var(--pico-muted-border-color);
+  border-radius: 999px;
+}
+
+.chips button:hover {
+  color: var(--pico-color);
+  border-color: var(--pico-muted-color);
+}
+
+.chips button.active {
+  color: var(--pico-primary-inverse);
+  background: var(--pico-primary);
+  border-color: var(--pico-primary);
+}
+
+h2.week {
+  margin: 2.5rem 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--pico-muted-color);
+}
+
+h2.week:first-of-type {
+  margin-top: 1rem;
 }
 
 ul.posts {
@@ -61,26 +104,73 @@ ul.posts li:last-child {
   border-bottom: 0;
 }
 
-ul.posts a {
+.post-title {
   font-weight: 500;
   text-decoration: none;
 }
 
-ul.posts time {
-  display: block;
-  margin-top: 0.15rem;
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 0.35rem;
   font-size: 0.8125rem;
   color: var(--pico-muted-color);
 }
 
+.meta .cat {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.6875rem;
+}
+
+.byline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--pico-muted-color);
+  text-decoration: none;
+}
+
+.byline img {
+  border-radius: 50%;
+  display: block;
+}
+
+.byline:hover {
+  color: var(--pico-color);
+}
+
+.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--pico-muted-color);
+  background: var(--pico-code-background-color);
+  border-radius: 999px;
+  vertical-align: middle;
+}
+
 ul.posts p {
-  margin: 0.35rem 0 0;
+  margin: 0.4rem 0 0;
   font-size: 0.9375rem;
   color: var(--pico-muted-color);
 }
 
-article header time {
-  font-size: 0.875rem;
+article header {
+  margin-bottom: 1.5rem;
+}
+
+article header .meta {
+  margin-top: 0.5rem;
+}
+
+.draft-note {
   color: var(--pico-muted-color);
 }
 
@@ -91,6 +181,64 @@ pre {
 .back {
   display: inline-block;
   margin-top: 2rem;
+}
+
+.author-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-head img {
+  border-radius: 50%;
+  flex: none;
+}
+
+.author-head h1 {
+  margin: 0;
+}
+
+.role {
+  margin: 0;
+  color: var(--pico-muted-color);
+  font-size: 0.875rem;
+}
+
+ul.author-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.author-list li {
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+ul.author-list li:last-child {
+  border-bottom: 0;
+}
+
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 0;
+  text-decoration: none;
+  color: var(--pico-color);
+}
+
+.author-card img {
+  border-radius: 50%;
+  flex: none;
+}
+
+.author-card div {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-card .role {
+  font-size: 0.8125rem;
 }
 
 footer.site {

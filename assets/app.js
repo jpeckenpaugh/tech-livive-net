@@ -5,6 +5,21 @@
   var brand = document.querySelector("[data-brand]");
   var footer = document.querySelector("[data-footer]");
   var data = null;
+  var activeCat = null;
+
+  function authorById(id) {
+    for (var i = 0; i < data.authors.length; i++) {
+      if (data.authors[i].id === id) return data.authors[i];
+    }
+    return null;
+  }
+
+  function postById(id) {
+    for (var i = 0; i < data.posts.length; i++) {
+      if (data.posts[i].id === id) return data.posts[i];
+    }
+    return null;
+  }
 
   function fmtDate(iso) {
     var parts = iso.split("-").map(Number);
@@ -17,15 +32,90 @@
     });
   }
 
+  function badge(status) {
+    if (status === "planned") return ' <span class="badge">Planned</span>';
+    return "";
+  }
+
+  function authorLink(id) {
+    var a = authorById(id);
+    if (!a) return "";
+    return (
+      '<a class="byline" href="#/author/' + a.id + '">' +
+      '<img src="' + a.avatar + '" alt="" width="20" height="20">' +
+      "<span>" + a.name + "</span></a>"
+    );
+  }
+
+  function categories() {
+    var seen = {};
+    var out = [];
+    data.posts.forEach(function (p) {
+      if (!seen[p.categoryId]) {
+        seen[p.categoryId] = { id: p.categoryId, name: p.category, count: 0 };
+        out.push(seen[p.categoryId]);
+      }
+      seen[p.categoryId].count++;
+    });
+    out.sort(function (a, b) {
+      return b.count - a.count;
+    });
+    return out;
+  }
+
+  function postListItem(p) {
+    return (
+      "<li>" +
+      '<a class="post-title" href="#/post/' + p.id + '">' + p.title + "</a>" +
+      badge(p.status) +
+      '<div class="meta">' +
+      authorLink(p.authorId) +
+      "<time datetime=\"" + p.date + '">' + fmtDate(p.date) + "</time>" +
+      '<span class="cat">' + p.category + "</span>" +
+      "</div>" +
+      "<p>" + p.summary + "</p>" +
+      "</li>"
+    );
+  }
+
   function viewList() {
-    var items = data.posts
-      .map(function (p) {
+    var cats = categories();
+    var chips =
+      '<div class="chips"><button data-filter="" class="' +
+      (activeCat ? "" : "active") +
+      '">All (' +
+      data.posts.length +
+      ")</button>" +
+      cats
+        .map(function (c) {
+          return (
+            '<button data-filter="' + c.id + '" class="' +
+            (activeCat === c.id ? "active" : "") +
+            '">' + c.name + " (" + c.count + ")</button>"
+          );
+        })
+        .join("") +
+      "</div>";
+
+    var posts = data.posts.filter(function (p) {
+      return !activeCat || p.categoryId === activeCat;
+    });
+
+    var groups = [];
+    posts.forEach(function (p) {
+      var g = groups[groups.length - 1];
+      if (!g || g.date !== p.date) {
+        g = { date: p.date, week: p.week, items: [] };
+        groups.push(g);
+      }
+      g.items.push(p);
+    });
+
+    var body = groups
+      .map(function (g) {
         return (
-          '<li>' +
-          '<a href="#/post/' + p.id + '">' + p.title + "</a>" +
-          '<time datetime="' + p.date + '">' + fmtDate(p.date) + "</time>" +
-          "<p>" + p.summary + "</p>" +
-          "</li>"
+          '<h2 class="week">Week ' + g.week + " &middot; " + fmtDate(g.date) + "</h2>" +
+          '<ul class="posts">' + g.items.map(postListItem).join("") + "</ul>"
         );
       })
       .join("");
@@ -33,18 +123,60 @@
     return (
       "<h1>Posts</h1>" +
       '<p class="intro">' + data.site.tagline + "</p>" +
-      '<ul class="posts">' + items + "</ul>"
+      chips +
+      (body || "<p>No posts in this category.</p>")
     );
   }
 
   function viewPost(p) {
     return (
       "<article>" +
-      "<header><h1>" + p.title + "</h1>" +
-      '<time datetime="' + p.date + '">' + fmtDate(p.date) + "</time></header>" +
+      '<header><h1>' + p.title + "</h1>" +
+      '<div class="meta">' +
+      authorLink(p.authorId) +
+      '<time datetime="' + p.date + '">' + fmtDate(p.date) + "</time>" +
+      '<span class="cat">' + p.category + "</span>" +
+      badge(p.status) +
+      "</div></header>" +
       p.body +
       '<a class="back" href="#/">&larr; Back to posts</a>' +
       "</article>"
+    );
+  }
+
+  function viewAuthor(a) {
+    var posts = data.posts.filter(function (p) {
+      return p.authorId === a.id;
+    });
+    return (
+      '<article class="author-page">' +
+      '<header class="author-head">' +
+      '<img src="' + a.avatar + '" alt="" width="56" height="56">' +
+      "<div><h1>" + a.name + "</h1>" +
+      '<p class="role">' + a.role + "</p></div></header>" +
+      "<p>" + a.bio + "</p>" +
+      '<h2 class="week">Posts by ' + a.name + "</h2>" +
+      '<ul class="posts">' + posts.map(postListItem).join("") + "</ul>" +
+      '<a class="back" href="#/authors">&larr; All authors</a>' +
+      "</article>"
+    );
+  }
+
+  function viewAuthors() {
+    var cards = data.authors
+      .map(function (a) {
+        return (
+          '<li><a class="author-card" href="#/author/' + a.id + '">' +
+          '<img src="' + a.avatar + '" alt="" width="40" height="40">' +
+          "<div><strong>" + a.name + "</strong>" +
+          '<span class="role">' + a.role + "</span></div></a></li>"
+        );
+      })
+      .join("");
+    return (
+      "<article><header><h1>Authors</h1></header>" +
+      '<p class="intro">Every byline on this site is a persona, each with its own beat and voice.</p>' +
+      '<ul class="author-list">' + cards + "</ul></article>"
     );
   }
 
@@ -74,20 +206,21 @@
     var title;
 
     if (parts[0] === "post" && parts[1]) {
-      var post = data.posts.filter(function (p) {
-        return p.id === parts[1];
-      })[0];
-      if (post) {
-        html = viewPost(post);
-        title = post.title;
-      } else {
-        html = viewNotFound();
-        title = "Not found";
-      }
+      var post = postById(parts[1]);
+      html = post ? viewPost(post) : viewNotFound();
+      title = post ? post.title : "Not found";
+    } else if (parts[0] === "author" && parts[1]) {
+      var author = authorById(parts[1]);
+      html = author ? viewAuthor(author) : viewNotFound();
+      title = author ? author.name : "Not found";
+    } else if (parts[0] === "authors") {
+      html = viewAuthors();
+      title = "Authors";
     } else if (parts[0] === "about") {
       html = viewAbout();
       title = data.about.title;
     } else {
+      activeCat = null;
       html = viewList();
       title = data.site.title;
     }
@@ -97,6 +230,13 @@
       title === data.site.title ? title : title + " \u00b7 " + data.site.title;
     window.scrollTo(0, 0);
   }
+
+  app.addEventListener("click", function (ev) {
+    var btn = ev.target.closest("[data-filter]");
+    if (!btn) return;
+    activeCat = btn.getAttribute("data-filter") || null;
+    app.innerHTML = viewList();
+  });
 
   fetch("data/posts.json", { cache: "no-cache" })
     .then(function (res) {
