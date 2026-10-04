@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 420" width="760" height="420" role="img" aria-labelledby="fig2t fig2d">
+  <title id="fig2t">Conceptual CM5 connector breakout and carrier routing rules</title>
+  <desc id="fig2d">The two 100-pin CM5 connectors grouped by function. CN3 (pins 1 to 100) carries power, the 18-bit DPI RGB666 display bus, SDIO, touch I2C and housekeeping control. CN4 (pins 101 to 200) carries the PCIe Gen2 lane, HDMI0/1, USB 3.0 and USB 2.0. Below, the routing rules that matter are listed: PCIe 90 ohm with 0.1 mm intra-pair and receive-side AC coupling, HDMI 100 ohm with 0.15 mm intra-pair and 25 mm inter-pair, USB 3.0 90 ohm, and the single-ended DPI bundle which has no published impedance rule and must be length-matched to the pixel clock.</desc>
+  <style>
+    text{fill:#1a1a1a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    .ttl{font-size:15px;font-weight:700}
+    .h{font-size:13px;font-weight:600}
+    .b{font-size:12px}
+    .box{fill:#ffffff;stroke:#1a1a1a;stroke-width:1.8}
+    .band{fill:#1a1a1a;fill-opacity:0.05;stroke:#1a1a1a;stroke-width:1.2}
+    .bandA{fill:#1f6feb;fill-opacity:0.10;stroke:#1f6feb;stroke-width:1.4}
+    .rule{fill:#ffffff;stroke:#1a1a1a;stroke-width:1.6}
+  </style>
+  <rect width="760" height="420" fill="#ffffff"/>
+
+  <text class="ttl" x="20" y="24">What the carrier breaks out of the CM5</text>
+
+  <!-- CN3 -->
+  <rect class="box" x="40" y="44" width="300" height="250" rx="5"/>
+  <text class="h" x="56" y="68">CN3 - pins 1-100 (top)</text>
+  <text class="b" x="56" y="86">18-bit DPI + storage + housekeeping</text>
+
+  <rect class="band" x="48" y="98" width="284" height="36" rx="3"/>
+  <text class="b" x="58" y="112">Power</text>
+  <text class="b" x="58" y="127">5 V - 3V3 - GND</text>
+
+  <rect class="bandA" x="48" y="138" width="284" height="36" rx="3"/>
+  <text class="b" x="58" y="152">DPI RGB666 (DISP_*)</text>
+  <text class="b" x="58" y="167">R/G/B2..7 - PCLK - DE - HS - VS</text>
+
+  <rect class="band" x="48" y="178" width="284" height="36" rx="3"/>
+  <text class="b" x="58" y="192">SDIO</text>
+  <text class="b" x="58" y="207">eMMC / microSD</text>
+
+  <rect class="band" x="48" y="218" width="284" height="36" rx="3"/>
+  <text class="b" x="58" y="232">Touch I2C</text>
+  <text class="b" x="58" y="247">edt-ft5x06 @ 0x48</text>
+
+  <rect class="band" x="48" y="258" width="284" height="30" rx="3"/>
+  <text class="b" x="58" y="277">Control: power button - LED - fan - RTC</text>
+
+  <!-- CN4 -->
+  <rect class="box" x="420" y="44" width="300" height="250" rx="5"/>
+  <text class="h" x="436" y="68">CN4 - pins 101-200 (bottom)</text>
+  <text class="b" x="436" y="86">differential fast lanes + USB</text>
+
+  <rect class="band" x="428" y="98" width="284" height="36" rx="3"/>
+  <text class="b" x="438" y="112">PCIe Gen2 (1 lane)</text>
+  <text class="b" x="438" y="127">M.2 2242 socket</text>
+
+  <rect class="band" x="428" y="138" width="284" height="36" rx="3"/>
+  <text class="b" x="438" y="152">HDMI0 / HDMI1</text>
+  <text class="b" x="438" y="167">full-size HDMI</text>
+
+  <rect class="band" x="428" y="178" width="284" height="36" rx="3"/>
+  <text class="b" x="438" y="192">USB 3.0 (2 pairs)</text>
+  <text class="b" x="438" y="207">two external ports</text>
+
+  <rect class="band" x="428" y="218" width="284" height="36" rx="3"/>
+  <text class="b" x="438" y="232">USB 2.0</text>
+  <text class="b" x="438" y="247">RP2040 keyboard HID</text>
+
+  <rect class="band" x="428" y="258" width="284" height="30" rx="3"/>
+  <text class="b" x="438" y="277">GND and spare</text>
+
+  <!-- Routing rules -->
+  <rect class="rule" x="40" y="312" width="680" height="92" rx="5"/>
+  <text class="h" x="56" y="334">Routing rules that matter (CM5 datasheet [s11])</text>
+  <text class="b" x="56" y="354">PCIe Gen2: 90 ohm differential - ~0.1 mm intra-pair match - add 220 nF AC coupling on the receive side</text>
+  <text class="b" x="56" y="372">HDMI: 100 ohm - ~0.15 mm intra-pair - 25 mm max inter-pair - USB 3.0: 90 ohm differential</text>
+  <text class="b" x="56" y="390">DPI: single-ended parallel CMOS - no datasheet impedance rule - length-match data/control to PCLK; keep the reference plane continuous</text>
+</svg>

@@ -128,6 +128,38 @@
     );
   }
 
+  function esc(s) {
+    return String(s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function viewSources(sources) {
+    if (!sources || !sources.length) return "";
+    return (
+      '<section class="sources"><h2>Sources</h2><ol>' +
+      sources
+        .map(function (s) {
+          var label = s.url
+            ? '<a href="' + esc(s.url) + '" rel="noopener" target="_blank">' +
+              esc(s.title) + "</a>"
+            : esc(s.title);
+          var meta = [];
+          if (s.publisher) meta.push(esc(s.publisher));
+          if (s.date) meta.push(esc(s.date));
+          return (
+            '<li id="src-' + esc(s.id) + '">' + label +
+            (meta.length ? " — " + meta.join(", ") : "") +
+            "</li>"
+          );
+        })
+        .join("") +
+      "</ol></section>"
+    );
+  }
+
   function viewPost(p) {
     return (
       "<article>" +
@@ -139,6 +171,7 @@
       badge(p.status) +
       "</div></header>" +
       p.body +
+      viewSources(p.sources) +
       '<a class="back" href="#/">&larr; Back to posts</a>' +
       "</article>"
     );
@@ -171,11 +204,6 @@
     profile += fieldGroup("Toolkit", a.toolkit);
     if (a.joined) {
       profile += '<p class="joined">On the masthead since ' + fmtDate(a.joined) + ".</p>";
-    }
-    if (a.persona) {
-      profile +=
-        '<p class="persona-note">' + a.name +
-        " is an AI persona. Every byline on this site is.</p>";
     }
 
     return (

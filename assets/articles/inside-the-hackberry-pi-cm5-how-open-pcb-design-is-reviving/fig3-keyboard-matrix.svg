@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 480" width="760" height="480" role="img" aria-labelledby="fig3t fig3d">
+  <title id="fig3t">Hackberry Pi CM5 8 by 8 keyboard matrix and RP2040</title>
+  <desc id="fig3d">An 8 by 8 diode-isolated keyboard matrix built from a BlackBerry Q10, Q20 or 9900 keypad. Eight row wires and eight column wires are pulled into an RP2040 (U66) running QMK/Vial, which presents the keypad to the CM5 as a USB HID device. The matrix sits behind the 40-pin keyboard board-to-board connector CN2; trackpad I2C, keyboard backlight and the microphone also cross CN2. The exact RP2040 GPIO-to-row and GPIO-to-column map is not recoverable from the published schematic, so pin names are marked verify.</desc>
+  <style>
+    text{fill:#1a1a1a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    .ttl{font-size:15px;font-weight:700}
+    .h{font-size:13px;font-weight:600}
+    .b{font-size:12px}
+    .box{fill:#ffffff;stroke:#1a1a1a;stroke-width:1.6}
+    .bus{stroke:#1a1a1a;stroke-width:3;fill:none}
+    .wire{stroke:#1a1a1a;stroke-width:1;fill:none}
+    .ln{stroke:#1a1a1a;stroke-width:1.5;fill:none}
+    .bound{fill:none;stroke:#1f6feb;stroke-width:1.6;stroke-dasharray:6 4}
+    .mid{text-anchor:middle}
+    .end{text-anchor:end}
+    .ver{font-size:12px;fill:#1f6feb}
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+    <g id="key">
+      <rect x="-13" y="-13" width="26" height="26" rx="2" fill="#ffffff" stroke="#1a1a1a" stroke-width="1.2"/>
+      <path d="M-4,-5 L4,-5 L0,4 Z" fill="#1a1a1a"/>
+      <line x1="-5" y1="4" x2="5" y2="4" stroke="#1a1a1a" stroke-width="1.6"/>
+      <line x1="0" y1="-13" x2="0" y2="-5" stroke="#1a1a1a" stroke-width="1"/>
+      <line x1="0" y1="4" x2="0" y2="13" stroke="#1a1a1a" stroke-width="1"/>
+    </g>
+  </defs>
+  <rect width="760" height="480" fill="#ffffff"/>
+
+  <text class="ttl" x="20" y="24">Keyboard architecture - 8x8 matrix + RP2040</text>
+
+  <!-- CN2 boundary -->
+  <text class="h" x="42" y="42">CN2 - 40-pin keyboard BTB (physical boundary)</text>
+  <rect class="bound" x="42" y="48" width="346" height="392" rx="6"/>
+
+  <!-- matrix wires -->
+  <g class="wire">
+    <line x1="70" y1="89" x2="364" y2="89"/><line x1="70" y1="127" x2="364" y2="127"/>
+    <line x1="70" y1="165" x2="364" y2="165"/><line x1="70" y1="203" x2="364" y2="203"/>
+    <line x1="70" y1="241" x2="364" y2="241"/><line x1="70" y1="279" x2="364" y2="279"/>
+    <line x1="70" y1="317" x2="364" y2="317"/><line x1="70" y1="355" x2="364" y2="355"/>
+    <line x1="89" y1="70" x2="89" y2="374"/><line x1="127" y1="70" x2="127" y2="374"/>
+    <line x1="165" y1="70" x2="165" y2="374"/><line x1="203" y1="70" x2="203" y2="374"/>
+    <line x1="241" y1="70" x2="241" y2="374"/><line x1="279" y1="70" x2="279" y2="374"/>
+    <line x1="317" y1="70" x2="317" y2="374"/><line x1="355" y1="70" x2="355" y2="374"/>
+  </g>
+
+  <!-- 64 keys -->
+  <g>
+    <use xlink:href="#key" href="#key" x="89" y="89"/><use xlink:href="#key" href="#key" x="127" y="89"/><use xlink:href="#key" href="#key" x="165" y="89"/><use xlink:href="#key" href="#key" x="203" y="89"/><use xlink:href="#key" href="#key" x="241" y="89"/><use xlink:href="#key" href="#key" x="279" y="89"/><use xlink:href="#key" href="#key" x="317" y="89"/><use xlink:href="#key" href="#key" x="355" y="89"/>
+    <use xlink:href="#key" href="#key" x="89" y="127"/><use xlink:href="#key" href="#key" x="127" y="127"/><use xlink:href="#key" href="#key" x="165" y="127"/><use xlink:href="#key" href="#key" x="203" y="127"/><use xlink:href="#key" href="#key" x="241" y="127"/><use xlink:href="#key" href="#key" x="279" y="127"/><use xlink:href="#key" href="#key" x="317" y="127"/><use xlink:href="#key" href="#key" x="355" y="127"/>
+    <use xlink:href="#key" href="#key" x="89" y="165"/><use xlink:href="#key" href="#key" x="127" y="165"/><use xlink:href="#key" href="#key" x="165" y="165"/><use xlink:href="#key" href="#key" x="203" y="165"/><use xlink:href="#key" href="#key" x="241" y="165"/><use xlink:href="#key" href="#key" x="279" y="165"/><use xlink:href="#key" href="#key" x="317" y="165"/><use xlink:href="#key" href="#key" x="355" y="165"/>
+    <use xlink:href="#key" href="#key" x="89" y="203"/><use xlink:href="#key" href="#key" x="127" y="203"/><use xlink:href="#key" href="#key" x="165" y="203"/><use xlink:href="#key" href="#key" x="203" y="203"/><use xlink:href="#key" href="#key" x="241" y="203"/><use xlink:href="#key" href="#key" x="279" y="203"/><use xlink:href="#key" href="#key" x="317" y="203"/><use xlink:href="#key" href="#key" x="355" y="203"/>
+    <use xlink:href="#key" href="#key" x="89" y="241"/><use xlink:href="#key" href="#key" x="127" y="241"/><use xlink:href="#key" href="#key" x="165" y="241"/><use xlink:href="#key" href="#key" x="203" y="241"/><use xlink:href="#key" href="#key" x="241" y="241"/><use xlink:href="#key" href="#key" x="279" y="241"/><use xlink:href="#key" href="#key" x="317" y="241"/><use xlink:href="#key" href="#key" x="355" y="241"/>
+    <use xlink:href="#key" href="#key" x="89" y="279"/><use xlink:href="#key" href="#key" x="127" y="279"/><use xlink:href="#key" href="#key" x="165" y="279"/><use xlink:href="#key" href="#key" x="203" y="279"/><use xlink:href="#key" href="#key" x="241" y="279"/><use xlink:href="#key" href="#key" x="279" y="279"/><use xlink:href="#key" href="#key" x="317" y="279"/><use xlink:href="#key" href="#key" x="355" y="279"/>
+    <use xlink:href="#key" href="#key" x="89" y="317"/><use xlink:href="#key" href="#key" x="127" y="317"/><use xlink:href="#key" href="#key" x="165" y="317"/><use xlink:href="#key" href="#key" x="203" y="317"/><use xlink:href="#key" href="#key" x="241" y="317"/><use xlink:href="#key" href="#key" x="279" y="317"/><use xlink:href="#key" href="#key" x="317" y="317"/><use xlink:href="#key" href="#key" x="355" y="317"/>
+    <use xlink:href="#key" href="#key" x="89" y="355"/><use xlink:href="#key" href="#key" x="127" y="355"/><use xlink:href="#key" href="#key" x="165" y="355"/><use xlink:href="#key" href="#key" x="203" y="355"/><use xlink:href="#key" href="#key" x="241" y="355"/><use xlink:href="#key" href="#key" x="279" y="355"/><use xlink:href="#key" href="#key" x="317" y="355"/><use xlink:href="#key" href="#key" x="355" y="355"/>
+  </g>
+
+  <!-- row / column labels -->
+  <g class="b end">
+    <text x="64" y="93">ROW1</text><text x="64" y="131">ROW2</text><text x="64" y="169">ROW3</text><text x="64" y="207">ROW4</text>
+    <text x="64" y="245">ROW5</text><text x="64" y="283">ROW6</text><text x="64" y="321">ROW7</text><text x="64" y="359">ROW8</text>
+  </g>
+  <g class="b mid">
+    <text x="89" y="66">COL1</text><text x="127" y="66">COL2</text><text x="165" y="66">COL3</text><text x="203" y="66">COL4</text>
+    <text x="241" y="66">COL5</text><text x="279" y="66">COL6</text><text x="317" y="66">COL7</text><text x="355" y="66">COL8</text>
+  </g>
+
+  <!-- row bus -->
+  <g class="wire">
+    <line x1="364" y1="89" x2="384" y2="89"/><line x1="364" y1="127" x2="384" y2="127"/>
+    <line x1="364" y1="165" x2="384" y2="165"/><line x1="364" y1="203" x2="384" y2="203"/>
+    <line x1="364" y1="241" x2="384" y2="241"/><line x1="364" y1="279" x2="384" y2="279"/>
+    <line x1="364" y1="317" x2="384" y2="317"/><line x1="364" y1="355" x2="384" y2="355"/>
+  </g>
+  <line class="bus" x1="384" y1="89" x2="384" y2="355"/>
+  <path class="ln" d="M384,217 H430" marker-end="url(#a)"/>
+  <text class="ver" x="392" y="210">ROW1..8 - GPIOx (verify)</text>
+
+  <!-- column bus -->
+  <g class="wire">
+    <line x1="89" y1="374" x2="89" y2="392"/><line x1="127" y1="374" x2="127" y2="392"/>
+    <line x1="165" y1="374" x2="165" y2="392"/><line x1="203" y1="374" x2="203" y2="392"/>
+    <line x1="241" y1="374" x2="241" y2="392"/><line x1="279" y1="374" x2="279" y2="392"/>
+    <line x1="317" y1="374" x2="317" y2="392"/><line x1="355" y1="374" x2="355" y2="392"/>
+  </g>
+  <line class="bus" x1="89" y1="392" x2="355" y2="392"/>
+  <path class="ln" d="M355,392 H404 V272 H430" marker-end="url(#a)"/>
+  <text class="ver" x="404" y="390">COL1..8 - GPIOx (verify)</text>
+
+  <!-- RP2040 -->
+  <rect class="box" x="430" y="150" width="310" height="150" rx="5"/>
+  <text class="h mid" x="585" y="176">RP2040 (U66)</text>
+  <text class="b mid" x="585" y="196">dual Cortex-M0+ - 12 MHz crystal (X2)</text>
+  <text class="b mid" x="585" y="216">8x8 scan - QMK / Vial</text>
+  <text class="b mid" x="585" y="236">W25Q16JVSSIQ 2 MB QSPI flash (U65)</text>
+  <text class="b mid" x="585" y="256">USB HID to CM5</text>
+  <text class="b mid" x="585" y="276">native USB 1.1 device</text>
+
+  <rect class="box" x="430" y="314" width="310" height="46" rx="5"/>
+  <text class="b mid" x="585" y="342">USB HID to CM5 (USB 2.0)</text>
+
+  <rect class="box" x="430" y="374" width="150" height="64" rx="5"/>
+  <text class="b mid" x="505" y="396">Trackpad I2C</text>
+  <text class="b mid" x="505" y="414">TP_SDA / TP_SCL</text>
+  <text class="b mid" x="505" y="430">address verify</text>
+
+  <rect class="box" x="590" y="374" width="150" height="64" rx="5"/>
+  <text class="b mid" x="665" y="396">Keyboard backlight</text>
+  <text class="b mid" x="665" y="414">10 steps</text>
+  <text class="b mid" x="665" y="430">caps-lock toggle</text>
+</svg>

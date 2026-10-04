@@ -231,7 +231,7 @@
       "body": "<p>Examine how micro-wearables fit multi-wavelength optical PPG sensors, skin temperature thermistors, and 7-day lipo batteries inside titanium finger bands.</p><p><strong>Technical focus:</strong> Resin encapsulation potting, titanium Grade 5 casing skin compatibility, micro-flexible PCB flex circuits, 3D accelerometer sleep staging.</p><h2>Sources to consult</h2><ul><li>Teardown Whitepapers</li><li>Bio-Medical Sensor Specs</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "under-display-selfie-cameras-diffraction-reduction-ai-image-",
+      "id": "under-display-selfie-cameras-diffraction-reduction-ai-image",
       "title": "Under-Display Selfie Cameras: Diffraction Reduction & AI Image Reconstruction",
       "date": "2026-09-28",
       "month": "2026-09",
@@ -261,7 +261,7 @@
       "body": "<p>A software architecture dive into how community-developed Linux distributions strip down system overhead to run retro game emulation efficiently on budget ARM SoCs.</p><p><strong>Technical focus:</strong> Mainline Linux kernel porting for Rockchip SoCs, Direct Rendering Manager (DRM/KMS) display output, RetroArch SDL2 input mapping.</p><h2>Sources to consult</h2><ul><li>Batocera Linux Source Repositories</li><li>Rockchip Kernel Documentation</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "open-source-robotic-arms-designing-3d-printed-6-dof-desktop-",
+      "id": "open-source-robotic-arms-designing-3d-printed-6-dof-desktop",
       "title": "Open-Source Robotic Arms: Designing 3D-Printed 6-DOF Desktop Manipulators",
       "date": "2026-09-27",
       "month": "2026-09",
@@ -276,7 +276,7 @@
       "body": "<p>Examine how open-source 6-axis robot arms use closed-loop stepper motors and planetary gearboxes to achieve 0.1mm repeatable pick-and-place accuracy.</p><p><strong>Technical focus:</strong> Closed-loop stepper motor encoder feedback, CAN bus motor communication, ROS2 (Robot Operating System) kinematics control.</p><h2>Sources to consult</h2><ul><li>PAROL6 GitHub Repositories</li><li>ROS2 Robot Kinematics Guides</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "smart-irrigation-controllers-integrating-evapotranspiration-",
+      "id": "smart-irrigation-controllers-integrating-evapotranspiration",
       "title": "Smart Irrigation Controllers: Integrating Evapotranspiration Math with Weather APIs",
       "date": "2026-09-27",
       "month": "2026-09",
@@ -381,7 +381,7 @@
       "body": "<p>A practical technical analysis calculating how quantization levels (INT4 vs INT8 vs FP16) impact token-per-second generation speeds across different memory architectures.</p><p><strong>Technical focus:</strong> Memory bandwidth bottlenecks (GB/s), GGUF tensor quantization loss, KV cache RAM allocation, NPU vs GPU execution layers.</p><h2>Sources to consult</h2><ul><li>llama.cpp Repositories</li><li>Apple Silicon & Intel NPU Benchmarks</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "action-camera-sensor-wars-1-inch-sensors-vs-high-frame-rate-",
+      "id": "action-camera-sensor-wars-1-inch-sensors-vs-high-frame-rate",
       "title": "Action Camera Sensor Wars: 1-Inch Sensors vs. High-Frame-Rate Thermal Management",
       "date": "2026-09-23",
       "month": "2026-09",
@@ -501,7 +501,7 @@
       "body": "<p>Investigate how Gallium Nitride (GaN) field-effect transistors allow power supplies to operate at megahertz switching frequencies, shrinking transformer coils.</p><p><strong>Technical focus:</strong> GaN FET switching frequencies (1MHz+), planar transformer PCB coil traces, Active Clamp Flyback (ACF) topology, thermal potting compounds.</p><h2>Sources to consult</h2><ul><li>Navitas Semiconductor Whitepapers</li><li>Power Supply Teardowns</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "smart-aquarium-telemetry-automated-dosing-and-optical-water-",
+      "id": "smart-aquarium-telemetry-automated-dosing-and-optical-water",
       "title": "Smart Aquarium Telemetry: Automated Dosing and Optical Water Clarity Testing",
       "date": "2026-09-19",
       "month": "2026-09",
@@ -591,7 +591,7 @@
       "body": "<p>Analyze how uncooled vanadium oxide microbolometers detect long-wave infrared radiation and blend thermal maps with visible light camera outlines.</p><p><strong>Technical focus:</strong> Vanadium Oxide (VOx) pixel pitch (12µm vs 17µm), Thermal Sensitivity (NETD <40mK), MSX image blending overlay algorithms.</p><h2>Sources to consult</h2><ul><li>FLIR Sensor Technical Specs</li><li>Optical Infrared Physics Manuals</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "open-source-e-ink-typewriters-designing-low-latency-writers-",
+      "id": "open-source-e-ink-typewriters-designing-low-latency-writers",
       "title": "Open-Source E-Ink Typewriters: Designing Low-Latency Writers on Raspberry Pi Zero 2W",
       "date": "2026-09-15",
       "month": "2026-09",
@@ -696,7 +696,7 @@
       "body": "<p>Examine how standard consumer smartphones connect directly to low-Earth-orbit satellites without external dish hardware or prominent antenna nubs.</p><p><strong>Technical focus:</strong> Phased-array beamsteering on satellite side, LTE Band 25/26 sub-GHz phone antenna impedance matching, Doppler shift frequency correction.</p><h2>Sources to consult</h2><ul><li>FCC Spectrum Filings</li><li>Starlink Technical Documentation</li><li>3GPP Release 17/18 Specs</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "open-source-usb-power-delivery-monitors-designing-precision-",
+      "id": "open-source-usb-power-delivery-monitors-designing-precision",
       "title": "Open-Source USB Power Delivery Monitors: Designing Precision Power Bench Tools",
       "date": "2026-09-11",
       "month": "2026-09",
@@ -771,7 +771,7 @@
       "body": "<p>Compare traditional eccentric rotating mass (ERM) vibrators against dual-axis linear resonant actuators (LRA) and ultra-fast piezo haptic elements.</p><p><strong>Technical focus:</strong> LRA resonant frequency matching, response latency (<5ms), multi-frequency waveform synthesis, power consumption per haptic pulse.</p><h2>Sources to consult</h2><ul><li>Texas Instruments Haptic Driver Whitepapers</li><li>Teardown Reports</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "custom-mechanical-keyboards-for-ergonomics-columnar-stagger-",
+      "id": "custom-mechanical-keyboards-for-ergonomics-columnar-stagger",
       "title": "Custom Mechanical Keyboards for Ergonomics: Columnar Stagger vs. Ortholinear Layouts",
       "date": "2026-09-09",
       "month": "2026-09",
@@ -936,7 +936,7 @@
       "body": "<p>Examine the mechanical and battery engineering required to keep full-frame electric commuter bikes under 10kg without sacrificing motor responsiveness or frame stiffness.</p><p><strong>Technical focus:</strong> Bottom-bracket bilateral torque sensor sampling rates, monocoque carbon frame layup, 21700 cell battery packaging, regenerative braking efficiency.</p><h2>Sources to consult</h2><ul><li>Product Technical Specifications</li><li>Bicycle Engineering Standards</li><li>E-Bike Drive System Whitepapers</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "tandem-oled-in-mobile-laptops-brightness-burn-in-mitigation-",
+      "id": "tandem-oled-in-mobile-laptops-brightness-burn-in-mitigation",
       "title": "Tandem OLED in Mobile Laptops: Brightness, Burn-In Mitigation, and Power Efficiency",
       "date": "2026-09-01",
       "month": "2026-09",
@@ -966,7 +966,7 @@
       "body": "<p>Analyze how European appliance giants at IFA 2026 are implementing Matter's energy management specification to automatically balance high-load appliances against solar output and dynamic utility pricing.</p><p><strong>Technical focus:</strong> Matter energy cluster telemetry, dynamic tariff API integration, Thread border routing in major appliances, sub-GHz mesh stability.</p><h2>Sources to consult</h2><ul><li>IFA Press Releases</li><li>Connectivity Standards Alliance (CSA) Docs</li><li>Smart Grid Industry Reports</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "the-september-hardware-wave-forecasting-supply-chain-trends-",
+      "id": "the-september-hardware-wave-forecasting-supply-chain-trends",
       "title": "The September Hardware Wave: Forecasting Supply Chain Trends Ahead of Apple & Google Events",
       "date": "2026-08-31",
       "month": "2026-08",
@@ -981,7 +981,7 @@
       "body": "<p>A forward-looking analysis synthesizing Taiwanese supply-chain reports, packaging regulations, and FCC filings to project late-year hardware innovations.</p><p><strong>Technical focus:</strong> 3nm TSMC wafer allocation, Wi-Fi 7 chipset adoption rates, stacked battery technology production yields.</p><h2>Sources to consult</h2><ul><li>SEC Filings</li><li>Supply Chain Intelligence Reports</li><li>FCC Wireless Certification Database</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "precision-micro-meteorology-building-open-source-ultrasonic-",
+      "id": "precision-micro-meteorology-building-open-source-ultrasonic",
       "title": "Precision Micro-Meteorology: Building Open-Source Ultrasonic Anemometer Stations",
       "date": "2026-08-30",
       "month": "2026-08",
@@ -996,7 +996,7 @@
       "body": "<p>Explain how ultrasonic transducers replace moving mechanical wind vanes to measure wind speed and direction with zero moving parts via acoustic time-of-flight math.</p><p><strong>Technical focus:</strong> Ultrasonic transducer acoustic pulse time-of-flight (ToF) measurement, microsecond timer interrupts on microcontrollers, temperature compensation formulas.</p><h2>Sources to consult</h2><ul><li>Meteorological Instrument Handbooks</li><li>Open Weather Station Schematics</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "cartilage-conduction-vs-bone-conduction-the-physics-of-next-",
+      "id": "cartilage-conduction-vs-bone-conduction-the-physics-of-next",
       "title": "Cartilage Conduction vs. Bone Conduction: The Physics of Next-Gen Open-Ear Audio",
       "date": "2026-08-30",
       "month": "2026-08",
@@ -1101,7 +1101,7 @@
       "body": "<p>Explore the micro-controller, infrared barrier, and 134.2kHz RFID tag integration that ensures targeted prescription feeding in multi-pet households.</p><p><strong>Technical focus:</strong> 134.2kHz FSK microchip RFID antenna loops, infrared pinch-prevention safety curtains, silent stepper motor gearboxes.</p><h2>Sources to consult</h2><ul><li>Patent Documentation</li><li>Embedded Pet Tech Schematics</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "building-an-ultrawide-cyberdeck-custom-thermal-channels-for-",
+      "id": "building-an-ultrawide-cyberdeck-custom-thermal-channels-for",
       "title": "Building an Ultrawide Cyberdeck: Custom Thermal Channels for High-TDP SBCs",
       "date": "2026-08-26",
       "month": "2026-08",
@@ -1311,7 +1311,7 @@
       "body": "<p>How sub-GHz long-range (LoRa) radio transceiver chips paired with ESP32 or nRF52 microcontrollers create resilient encrypted mesh communication networks without cellular towers.</p><p><strong>Technical focus:</strong> Sub-1GHz ISM band radio propagation (915MHz / 868MHz), AES-256 packet encryption, GPS power management, LoRa spreading factor sensitivity.</p><h2>Sources to consult</h2><ul><li>Meshtastic Open-Source Documentation</li><li>Semtech LoRa Transceiver Data Sheets</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "ifa-berlin-sneak-peek-how-matter-1-3-1-4-is-unifying-energy-",
+      "id": "ifa-berlin-sneak-peek-how-matter-1-3-1-4-is-unifying-energy",
       "title": "IFA Berlin Sneak Peek: How Matter 1.3/1.4 Is Unifying Energy Management in Smart Appliances",
       "date": "2026-08-18",
       "month": "2026-08",
@@ -1461,7 +1461,7 @@
       "body": "<p>Analyze how current transformer (CT) clamps measure home circuit magnetic fields to provide real-time per-appliance wattage tracking via local ESPHome microcontrollers.</p><p><strong>Technical focus:</strong> Current transformer AC phase sampling, ADC precision (ADS1115), RMS calculation software loops, Home Assistant MQTT data streaming.</p><h2>Sources to consult</h2><ul><li>OpenEnergyMonitor Schematics</li><li>ESPHome Documentation</li><li>Electrical Engineering Textbooks</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "the-science-of-ergonomic-keyboards-matrix-wiring-and-custom-",
+      "id": "the-science-of-ergonomic-keyboards-matrix-wiring-and-custom",
       "title": "The Science of Ergonomic Keyboards: Matrix Wiring and Custom QMK/VIA Firmware Architecture",
       "date": "2026-08-11",
       "month": "2026-08",
@@ -1716,7 +1716,7 @@
       "body": "<p>Analyze Framework's published engineering blueprints and motherboard schematics to explain how modular expansion cards fit inside an ultra-compact chassis without compromising thermal management or structural integrity.</p><p><strong>Technical focus:</strong> USB4 controller layout, daughterboard pin densities, custom heatpipe thermal envelope, modular expansion card clearance.</p><h2>Sources to consult</h2><ul><li>Framework Engineering Blog</li><li>Open Hardware Schematics</li><li>Teardown Documentation</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
     },
     {
-      "id": "inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving-",
+      "id": "inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving",
       "title": "Inside the Hackberry Pi CM5: How Open PCB Design Is Reviving the Pocket Terminal",
       "date": "2026-08-01",
       "month": "2026-08",
@@ -1726,9 +1726,212 @@
       "category": "DIY / Maker Project",
       "categoryId": "diy-maker-project",
       "authorId": "forge",
-      "status": "planned",
-      "summary": "Analyze the open KiCad schematics and custom PCB layout of this project, exploring how makers successfully route Raspberry Pi Compute Module 5 pinouts to physical QWERTY matrix keyboards.",
-      "body": "<p>Analyze the open KiCad schematics and custom PCB layout of this project, exploring how makers successfully route Raspberry Pi Compute Module 5 pinouts to physical QWERTY matrix keyboards.</p><p><strong>Technical focus:</strong> RP2040 keyboard matrix controller, CM5 high-density board-to-board connectors, DSI screen interface routing, LiPo charging IC safety.</p><h2>Sources to consult</h2><ul><li>GitHub Repository</li><li>KiCad Schematic Files</li><li>Raspberry Pi CM5 Design Guides</li></ul><p class=\"draft-note\"><em>Planned article. This is an editorial brief, not the finished piece.</em></p>"
+      "status": "published",
+      "summary": "The Hackberry Pi CM5 is inspectable — MIT repo, schematic PDF, interactive BOM — but not forkable at the EDA level, and that trade-off is more interesting than the 'open KiCad' pitch.",
+      "body": "<h2>What it is, and what \"open\" actually means here</h2>\n\n<p>The HackberryPi_CM5 is a handheld Linux terminal built around the Raspberry\nPi Compute Module 5. Designer Zitao, a master's student at TU Dresden, packages\nit as aluminium front and back plates around a 3D-printed middle: 143.5 × 91.8 ×\n17.6 mm, 306 g with the cell, module and heatsink fitted.<sup class=\"cite\">[1]</sup>\nIt is CM5-only, and runs Raspberry Pi OS, Ubuntu, Kali and Lakka.<sup class=\"cite\">[1]</sup></p>\n\n<p>The usual pitch for a project like this is \"open schematics.\" It does not\nhold here. What\nthe repo actually publishes is a single-sheet schematic PDF, REV 1.0 dated\n2025-02-17,<sup class=\"cite\">[2]</sup> plus an interactive HTML BOM\ngenerated by KiCad's InteractiveHtmlBom plugin — footprint geometry, placement\nand a full netlist.<sup class=\"cite\">[3]</sup> What it does not\npublish is a single editable <code>.kicad_sch</code>, <code>.kicad_pcb</code> or\n<code>.kicad_pro</code> file. The keyboard firmware is worse: only compiled\n<code>.uf2</code> images and Vial <code>.vil</code> layout files, no QMK\nsource.<sup class=\"cite\">[4]</sup></p>\n\n<p>The repository is MIT-licensed, Copyright 2025 Zitao.<sup class=\"cite\">[5]</sup>\nIt is not OSHWA-certified — the OSHWA entry that looks similar is the unrelated\npiBrick Pocket-CM5, a different CM5 handheld.<sup class=\"cite\">[6]</sup>\nSo the honest framing is <em>inspectable, not forkable</em>: you can read the\ndesign down to the net, but you cannot open the EDA project and hit respin. That\ntrade-off is the spine of the rest of this article.</p>\n\n<figure>\n  <img src=\"assets/articles/inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving/fig1-system-block.svg\" alt=\"Block diagram of the Hackberry Pi CM5: two 100-pin CM5 connectors fan out to a parallel-RGB panel, an RP2040 keyboard controller, M.2 PCIe, HDMI, USB 3.0 and the power block.\">\n  <figcaption>Hackberry Pi CM5 signal map. Everything hangs off the two 100-pin CM5 connectors (CN3/CN4); the RP2040 keyboard controller talks to the CM5 as a USB HID device, and the 720×720 panel is driven over parallel RGB (DPI), not DSI.</figcaption>\n</figure>\n\n<h2>The carrier: breaking out a CM5</h2>\n\n<p>The CM5 presents two 100-pin high-density connectors — pins 1–100 on top,\n101–200 on the bottom — carrying nearly every module interface. The module is\n55 × 40 × 4.7 mm with a single 4.75–5.25 V input.<sup class=\"cite\">[7]</sup>\nInside is a BCM2712, quad Cortex-A76 at 2.4 GHz.<sup class=\"cite\">[8]</sup>\nThe Hackberry carrier mates those two connectors with a pair of Hirose\n<code>DF40C-100DS-0.4V(51)</code> parts on CN3 (top) and CN4 (bottom).<sup class=\"cite\">[3]</sup>\nRaspberry Pi's datasheet lists carrier-side stack heights of 1.5 mm and 4.0 mm;\nthe mechanical drawings show a heatsink above the module, so the design is\nclearly using the taller stack, though the exact CM5-side plug part is not\npublished.<sup class=\"cite\">[7]</sup></p>\n\n<p>What comes out of CN4 is the fast stuff: HDMI, a 1-lane PCIe Gen 2 link, two\nUSB 3.0 pairs. CN3 carries the 18-bit DPI display bus, SDIO, the touch I2C and\nhousekeeping (power button, LED, fan, RTC).<sup class=\"cite\">[3]</sup>\nThe carrier turns the PCIe lane into an M.2 2242 slot for NVMe or a Hailo\naccelerator, and adds full-size HDMI, two USB 3.0 ports, an RTC cell and a\nStemma I2C header.<sup class=\"cite\">[1]</sup></p>\n\n<p>This is where the datasheet rules bite. PCIe wants 90 Ω differential with\nintra-pair matching around 0.1 mm, and the carrier must add its own 220 nF\ncoupling on the receive side. HDMI wants 100 Ω with ~0.15 mm intra-pair and\n≤25 mm inter-pair. USB 3.0 wants 90 Ω.<sup class=\"cite\">[7]</sup>\nOn a board this dense — PCIe, HDMI, two USB 3.0, DPI and battery switching in\n17.6 mm — stackup and reference-plane continuity are the whole game. It ships\nassembled through Elecrow and, in the US, Carbon Computers, which credits Zitao\nas the creator.<sup class=\"cite\">[9]</sup></p>\n\n<figure>\n  <img src=\"assets/articles/inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving/fig2-cm5-routing.svg\" alt=\"Conceptual map of the two CM5 connectors grouped by function, with routing rules annotated for PCIe, HDMI, USB 3.0 and the single-ended DPI bundle.\">\n  <figcaption>What the carrier actually breaks out of the CM5. The differential fast lanes (PCIe, HDMI, USB 3.0) have hard routing rules; the 18-bit DPI bus is treated as a length-matched single-ended bundle.</figcaption>\n</figure>\n\n<h2>Keyboard: a BlackBerry keypad on an RP2040</h2>\n\n<p>The physical keypad is salvaged from a BlackBerry Q10, Q20 or 9900, with a\n9900 trackpad on the Q10 variant.<sup class=\"cite\">[1]</sup> The\ncontroller is a Raspberry Pi RP2040 (U66) with the expected support set: a\n<code>W25Q16JVSSIQ</code> 2 MB QSPI flash (U65) and a 12 MHz crystal\n(X2).<sup class=\"cite\">[3]</sup> The RP2040 has no internal flash,\nwhich is why the external part is mandatory.<sup class=\"cite\">[10]</sup>\nRows and columns run as an 8 × 8 matrix — <code>ROW1..ROW8</code> and\n<code>COL1..COL8</code> — across the 40-pin keyboard board-to-board connector,\nCN2, which also carries trackpad I2C and both backlight rails.<sup class=\"cite\">[2]</sup>\nThe exact RP2040 GPIO-to-row/column map is not reliably recoverable from the\npublished PDF, so I am not printing a pin table.</p>\n\n<p>Firmware is QMK with Vial, which gives live remapping in a GUI, layers,\ntap-dance and macros; the repo ships <code>.vil</code> layouts and\n<code>.uf2</code> images per keyboard.<sup class=\"cite\">[4]</sup>\nThe RP2040 is a first-class QMK target and <code>.uf2</code> is its native\nbootloader format.<sup class=\"cite\">[11]</sup> Vial is the QMK fork\nand configurator that reads those layouts.<sup class=\"cite\">[12]</sup>\nDebounce settings are not disclosed: the firmware source is not published, only\nthe binaries.<sup class=\"cite\">[4]</sup></p>\n\n<p>There is a good maker feature here: a USB-KVM mode. A side switch\nre-routes the keyboard and trackpad as an external USB HID to another machine,\nfor headless rescue work. The schematic shows <code>CH440R</code> and\n<code>CH443K</code> USB analog switches steering the RP2040's USB\nport.<sup class=\"cite\">[2]</sup></p>\n\n<figure>\n  <img src=\"assets/articles/inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving/fig3-keyboard-matrix.svg\" alt=\"An 8 by 8 diode-isolated keyboard matrix feeding an RP2040, bounded by the 40-pin CN2 connector, with trackpad I2C, backlight and USB-HID link shown.\">\n  <figcaption>Keyboard architecture: a BlackBerry Q10/Q20/9900 keypad re-hung on an 8×8 matrix, scanned by an RP2040 running QMK/Vial and presented to the CM5 as a USB HID device.</figcaption>\n</figure>\n\n<h2>Display: parallel RGB (DPI), not DSI</h2>\n\n<p>This is the biggest correction to the brief. The panel is a 4.0-inch a-Si\nTFT, 720 (RGB) × 720, with an 18-bit RGB666 interface and a Y17B driver\nIC.<sup class=\"cite\">[13]</sup> It is driven from the CM5's parallel\nDisplay Parallel Interface over CN3: six bits each of red, green and blue\n(<code>DISP_RED/GREEN/BLUE2..7</code>), plus pixel clock, data-enable and\nsyncs.<sup class=\"cite\">[2]</sup> Touch is an edt-ft5x06-class\ncontroller at I2C address 0x48, on a bit-banged i2c-gpio bus on GPIO10/11 that\nexists precisely because the DPI mapping claims most of GPIO0–27.<sup class=\"cite\">[14]</sup></p>\n\n<p>The device-tree overlay gives the real numbers: a 35 MHz pixel clock, 720 ×\n720 active, horizontal front/sync/back porches of 44/2/46, vertical of 16/2/18,\nall active-high, RGB666.<sup class=\"cite\">[14]</sup> Unlike the\ndifferential interfaces, the CM5 datasheet publishes no DPI trace or impedance\nrule, so this is judgement-call layout.<sup class=\"cite\">[7]</sup>\nDPI is single-ended parallel CMOS with no embedded clock and no deskew: a\nsetup/hold violation shows up as colour speckle or a shifted image rather than a\nclean link failure. Keep the pixel clock's reference plane continuous, match the\ndata and control lines to it, and keep the bundle away from the PCIe and USB 3.0\npairs. For anyone porting this panel, the current reference is the KMS\n<code>vc4-kms-dpi-generic</code> overlay, which supersedes the legacy\n<code>dpi_timings</code> path.<sup class=\"cite\">[15]</sup></p>\n\n<p>The panel backlight needs roughly 12 V, and the carrier boosts 3.3 V up to\nit.<sup class=\"cite\">[16]</sup> The BOM shows several candidate boost\nand dimmer parts; I will not assert which one feeds the panel LED string without\nthe editable schematic.<sup class=\"cite\">[17]</sup></p>\n\n<figure>\n  <img src=\"assets/articles/inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving/fig5-dpi-timing.svg\" alt=\"Left: a 720 by 720 frame timing diagram with 35 MHz pixel clock and the porches 44/2/46 and 16/2/18. Right: a stylised PCB cross-section of the single-ended DPI bundle.\">\n  <figcaption>The panel's timing, straight from the device-tree overlay: 35 MHz pixel clock, 720×720, RGB666. DPI is single-ended, so the layout — not the protocol — is what keeps the image clean.</figcaption>\n</figure>\n\n<h2>Power: two power-bank SoCs and a 1-cell LiPo</h2>\n\n<p>The cell is a 5000 mAh LiPo at 3.7 V (18.5 Wh), 2.75–4.2 V operating range,\nwith 5 A over-current protection on the cell itself.<sup class=\"cite\">[18]</sup>\nCharging runs at 1.5–2 A over USB-C.<sup class=\"cite\">[1]</sup></p>\n\n<p>The architecture uses two Injoinic power-bank SoCs, which is unusual but\ncost-effective. The project README assigns the IP5306 to charging and the\nIP5310 to the 5 V rail.<sup class=\"cite\">[16]</sup> The IP5306 is a\n2.1 A synchronous charger with a 2.4 A 5 V boost and integrated protections;\nthe IP5310 is a 3 A charge / 3.1 A boost part with integrated Type-C. Both are\nturn-key power-bank chips, so the exact division of charge, path and protection\nbetween them is not confirmable from the PDF alone.<sup class=\"cite\">[19]</sup><sup class=\"cite\">[20]</sup></p>\n\n<p>State of charge is read by a MAX17048 1-cell ModelGauge fuel gauge over I2C\nat address 0x36. It needs no current-sense resistor, which simplifies the\nboard, but it also does no learning — it models voltage, it does not count\ncharge.<sup class=\"cite\">[21]</sup> The gauge itself is a ±7.5 mV\nvoltage-measurement part that draws 3 µA hibernating.<sup class=\"cite\">[22]</sup></p>\n\n<p>The safety paperwork is strong for the cell — the repo ships UL1642 and\nIEC 62133 reports — but those cover the battery, not the assembled\ndevice.<sup class=\"cite\">[23]</sup><sup class=\"cite\">[24]</sup>\nA pouch cell in a metal, pocket-carried, USB-rechargeable enclosure is the\nfailure mode worth naming: crush or puncture, then thermal runaway, with the\nuser supplying and replacing the cell themselves.</p>\n\n<figure>\n  <img src=\"assets/articles/inside-the-hackberry-pi-cm5-how-open-pcb-design-is-reviving/fig4-power-path.svg\" alt=\"Power flow from USB-C through an IP5306 charger into a 5000 mAh LiPo cell, then an IP5310 boost to the CM5 5V rail, with a MAX17048 gauge and a backlight boost branch.\">\n  <figcaption>Power path. Two Injoinic power-bank SoCs split the job: IP5306 charges the cell from USB-C, IP5310 boosts it to the CM5's 5 V rail. MAX17048 reports state of charge over I2C.</figcaption>\n</figure>\n\n<h2>What the license actually buys you</h2>\n\n<p>MIT covers the repository, including the 3D-print models and documentation.<sup class=\"cite\">[5]</sup>\nIn practice you can print cases, replace them, reflash the keyboard,\nreuse the STEP/STL files, copy the schematic into KiCad to study it, and use the\npublished nets and pinout to design your own CM5 carrier.<sup class=\"cite\">[3]</sup>\nThat is real, and it is more than a lot of hardware projects give.</p>\n\n<p>What it does not buy is the ability to cleanly respin the exact board. The\nnetlist and placement are recoverable from the interactive BOM, but turning that\nback into an editable project is reverse-engineering, not a source release.\nMIT is also a copyright license written for software; it carries no patent grant\nand none of the hardware-specific design-file language that CERN-OHL-S or TAPR\nwould.<sup class=\"cite\">[5]</sup></p>\n\n<p>For contrast, Raspberry Pi publishes the CM5 IO Board KiCad files openly, so\na reader who wants a fully editable reference carrier has that\noption.<sup class=\"cite\">[25]</sup> The Hackberry gives you a\ndocumentation-grade openness: enough to understand and repair, not enough to\nfork. On a pocket terminal that is a reasonable trade — but a different promise\nthan \"open hardware,\" and the one thing I would ask the designer to change.</p>",
+      "sources": [
+        {
+          "n": 1,
+          "id": "s1",
+          "title": "ZitaoTech/HackberryPiCM5 — project repository (README)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025-03-28 (repo created; README current as accessed)"
+        },
+        {
+          "n": 2,
+          "id": "s7",
+          "title": "HackberryPi_CM5 schematic (Schematic_HackberryPi_CM5_Q20.pdf)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Hardware/Schematic_HackberryPi_CM5_Q20.pdf",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025-02-17 (sheet date), REV 1.0"
+        },
+        {
+          "n": 3,
+          "id": "s8",
+          "title": "HackberryPi_CM5 interactive BOM / netlist (Bom_HackberryPi_CM5_Q20_rev0.html)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Hardware/Bom_HackberryPi_CM5_Q20_rev0.html",
+          "publisher": "GitHub / Zitao (ZitaoTech), generated by KiCad InteractiveHtmlBom",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 4,
+          "id": "s3",
+          "title": "HackberryPi_CM5 Keyboard notes (Keyboard/README.md)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Keyboard/README.md",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 5,
+          "id": "s22",
+          "title": "HackberryPiCM5 LICENSE (MIT)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/LICENSE",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025"
+        },
+        {
+          "n": 6,
+          "id": "s27",
+          "title": "piBrick Pocket-CM5 OSHWA certification (ID000014)",
+          "url": "https://certification.oshwa.org/id000014.html",
+          "publisher": "Open Source Hardware Association",
+          "date": "2025-12-12"
+        },
+        {
+          "n": 7,
+          "id": "s11",
+          "title": "Raspberry Pi Compute Module 5 datasheet",
+          "url": "https://datasheets.raspberrypi.com/cm5/cm5-datasheet.pdf",
+          "publisher": "Raspberry Pi Ltd",
+          "date": "2025"
+        },
+        {
+          "n": 8,
+          "id": "s12",
+          "title": "Raspberry Pi Compute Module 5 product page",
+          "url": "https://www.raspberrypi.com/products/compute-module-5/",
+          "publisher": "Raspberry Pi Ltd",
+          "date": "n.d. (current)"
+        },
+        {
+          "n": 9,
+          "id": "s26",
+          "title": "CarbonComputers/Hackberry-Pi-CM5 (US reseller companion repo)",
+          "url": "https://github.com/CarbonComputers/Hackberry-Pi-CM5",
+          "publisher": "GitHub / CarbonComputers",
+          "date": "2025-06-21 (repo created)"
+        },
+        {
+          "n": 10,
+          "id": "s15",
+          "title": "Raspberry Pi RP2040 datasheet",
+          "url": "https://datasheets.raspberrypi.com/rp2040/rp2040-datasheet.pdf",
+          "publisher": "Raspberry Pi Ltd",
+          "date": "n.d."
+        },
+        {
+          "n": 11,
+          "id": "s21",
+          "title": "QMK Firmware — Raspberry Pi RP2040 platform documentation",
+          "url": "https://docs.qmk.fm/platformdev_rp2040",
+          "publisher": "QMK",
+          "date": "n.d. (current)"
+        },
+        {
+          "n": 12,
+          "id": "s25",
+          "title": "Vial — open-source QMK fork and keyboard configurator",
+          "url": "https://get.vial.today/",
+          "publisher": "Vial project",
+          "date": "n.d. (current)"
+        },
+        {
+          "n": 13,
+          "id": "s10",
+          "title": "Display module specification TL040HDS30-B1620C (Pre-Specification PDF)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Screen/Pre-Specification_TL040HDS30-B1620C_REV1.0.pdf",
+          "publisher": "Panel vendor spec, hosted in ZitaoTech repo",
+          "date": "2024-07-03"
+        },
+        {
+          "n": 14,
+          "id": "s9",
+          "title": "HackberryPi_CM5 device-tree overlay (Operating System/hackberrypi.dts)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Operating%20System/hackberrypi.dts",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 15,
+          "id": "s13",
+          "title": "Using a DPI Display on the Raspberry Pi (whitepaper RP-003471-WP)",
+          "url": "https://pip-assets.raspberrypi.com/categories/685-app-notes-guides-whitepapers/documents/RP-003471-WP-1-Using%20a%20DPI%20display.pdf",
+          "publisher": "Raspberry Pi Ltd (CC BY-ND 4.0)",
+          "date": "2022-04-29"
+        },
+        {
+          "n": 16,
+          "id": "s2",
+          "title": "HackberryPi_CM5 Hardware overview (Hardware/README.md)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Hardware/README.md",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 17,
+          "id": "s5",
+          "title": "HackberryPi_CM5 Screen notes (Screen/README.md)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Screen/README.md",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 18,
+          "id": "s4",
+          "title": "HackberryPi_CM5 Battery notes (Battery/README.md)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Battery/README.md",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 19,
+          "id": "s16",
+          "title": "Injoinic IP5306 datasheet (V1.31)",
+          "url": "https://static.chipdip.ru/lib/688/DOC045688389.pdf",
+          "publisher": "Injoinic Corp (mirror: chipdip.ru)",
+          "date": "2019 (V1.31)"
+        },
+        {
+          "n": 20,
+          "id": "s18",
+          "title": "LCSC IP5310 product page (C191176)",
+          "url": "https://www.lcsc.com/product-detail/C191176.html",
+          "publisher": "LCSC Electronics",
+          "date": "n.d."
+        },
+        {
+          "n": 21,
+          "id": "s6",
+          "title": "HackberryPi_CM5 Battery voltage measurement (Battery_Voltage_Measure/README.md)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Battery_Voltage_Measure/README.md",
+          "publisher": "GitHub / Zitao (ZitaoTech)",
+          "date": "2025 (repo)"
+        },
+        {
+          "n": 22,
+          "id": "s20",
+          "title": "MAX17048/MAX17049 datasheet (repo copy)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Battery_Voltage_Measure/MAX17048-Datasheet.pdf",
+          "publisher": "Analog Devices / Maxim Integrated (hosted in repo)",
+          "date": "2016 (Rev 7)"
+        },
+        {
+          "n": 23,
+          "id": "s23",
+          "title": "Battery UL1642 test report (repo copy)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Battery/UL1642-Report.pdf",
+          "publisher": "Test lab report, hosted in ZitaoTech repo",
+          "date": "n.d."
+        },
+        {
+          "n": 24,
+          "id": "s24",
+          "title": "Battery IEC 62133 test report (repo copy)",
+          "url": "https://github.com/ZitaoTech/HackberryPiCM5/blob/main/Battery/IEC62133%20Report-zrlk.pdf",
+          "publisher": "Test lab report, hosted in ZitaoTech repo",
+          "date": "n.d."
+        },
+        {
+          "n": 25,
+          "id": "s14",
+          "title": "Raspberry Pi Compute Module 5 IO Board design files (KiCad)",
+          "url": "https://pip.raspberrypi.com/categories/1098-design-files",
+          "publisher": "Raspberry Pi Ltd",
+          "date": "2025-10-06"
+        }
+      ],
+      "updated": "2026-08-01"
     },
     {
       "id": "spatial-displays-vs-virtual-screens-the-optics-behind-lightw",

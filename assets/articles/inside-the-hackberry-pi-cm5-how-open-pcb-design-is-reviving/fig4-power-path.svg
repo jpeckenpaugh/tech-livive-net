@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 420" width="760" height="420" role="img" aria-labelledby="fig4t fig4d">
+  <title id="fig4t">Hackberry Pi CM5 power path</title>
+  <desc id="fig4d">Power flow for the Hackberry Pi CM5. USB-C at 5 volts feeds an IP5306 charger, which charges a 5000 mAh single-cell LiPo (2.75 to 4.2 volts, 5 amp cell protection). An IP5310 boost converter turns the cell into the 5V0_IN rail for the CM5. A MAX17048 fuel gauge at I2C address 0x36 senses the cell, and a separate boost takes 3.3 volts up to roughly 12 volts for the panel backlight. Both Injoinic parts are battery-management power-bank SoCs; the exact split of charge, path and protection between them is not confirmable from the PDF.</desc>
+  <style>
+    text{fill:#1a1a1a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    .ttl{font-size:15px;font-weight:700}
+    .h{font-size:13px;font-weight:600}
+    .b{font-size:12px}
+    .box{fill:#ffffff;stroke:#1a1a1a;stroke-width:1.6}
+    .boxA{fill:#ffffff;stroke:#1f6feb;stroke-width:1.8}
+    .ln{stroke:#1a1a1a;stroke-width:1.6;fill:none}
+    .lnA{stroke:#1f6feb;stroke-width:1.8;fill:none}
+    .dash{stroke:#1a1a1a;stroke-width:1.4;fill:none;stroke-dasharray:5 4}
+    .mid{text-anchor:middle}
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1a1a1a"/></marker>
+    <marker id="aA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#1f6feb"/></marker>
+  </defs>
+  <rect width="760" height="420" fill="#ffffff"/>
+
+  <text class="ttl" x="20" y="24">Power path - USB-C to 5V rail</text>
+  <text class="b" x="20" y="44">Charge path</text>
+  <line x1="96" y1="40" x2="260" y2="40" stroke="#1f6feb" stroke-width="1.6"/>
+  <text class="b" x="300" y="44">Boost path</text>
+  <line x1="370" y1="40" x2="500" y2="40" stroke="#1f6feb" stroke-width="1.6"/>
+
+  <!-- flow blocks -->
+  <rect class="box" x="20" y="80" width="110" height="60" rx="4"/>
+  <text class="h mid" x="75" y="104">USB-C</text>
+  <text class="b mid" x="75" y="122">5 V in</text>
+  <text class="b mid" x="75" y="136">1.5-2 A charge</text>
+
+  <rect class="boxA" x="165" y="70" width="135" height="80" rx="4"/>
+  <text class="h mid" x="232" y="94">IP5306 (U61)</text>
+  <text class="b mid" x="232" y="112">charge / power-path</text>
+  <text class="b mid" x="232" y="128">2.1 A charger</text>
+  <text class="b mid" x="232" y="144">2.4 A 5 V boost</text>
+
+  <rect class="box" x="335" y="70" width="135" height="80" rx="4"/>
+  <text class="h mid" x="402" y="94">LiPo cell</text>
+  <text class="b mid" x="402" y="112">5000 mAh - 3.7 V</text>
+  <text class="b mid" x="402" y="128">2.75-4.2 V</text>
+  <text class="b mid" x="402" y="144">5 A cell protection</text>
+
+  <rect class="boxA" x="490" y="70" width="120" height="80" rx="4"/>
+  <text class="h mid" x="550" y="94">IP5310 (U27)</text>
+  <text class="b mid" x="550" y="112">boost to 5 V</text>
+  <text class="b mid" x="550" y="128">3 A / 3.1 A</text>
+  <text class="b mid" x="550" y="144">integrated Type-C</text>
+
+  <rect class="box" x="650" y="70" width="95" height="80" rx="4"/>
+  <text class="h mid" x="697" y="96">CM5</text>
+  <text class="b mid" x="697" y="114">4.75-5.25 V</text>
+  <text class="b mid" x="697" y="132">single 5 V in</text>
+
+  <path class="lnA" d="M130,110 H165" marker-end="url(#aA)"/>
+  <text class="b mid" x="147" y="102">5 V</text>
+  <path class="lnA" d="M300,110 H335" marker-end="url(#aA)"/>
+  <text class="b mid" x="317" y="102">charge</text>
+  <path class="lnA" d="M470,110 H490" marker-end="url(#aA)"/>
+  <text class="b mid" x="480" y="102">cell</text>
+  <path class="lnA" d="M610,110 H650" marker-end="url(#aA)"/>
+  <text class="b mid" x="630" y="102">5V0_IN</text>
+
+  <!-- gauge -->
+  <rect class="box" x="185" y="252" width="180" height="68" rx="4"/>
+  <text class="h mid" x="275" y="276">MAX17048 gauge</text>
+  <text class="b mid" x="275" y="294">I2C 0x36 - +/-7.5 mV</text>
+  <text class="b mid" x="275" y="310">no sense resistor</text>
+
+  <path class="ln" d="M402,150 V236 H275 V252" marker-end="url(#a)"/>
+  <text class="b" x="300" y="230">cell voltage sense</text>
+
+  <path class="dash" d="M365,286 H445 V140 H650" marker-end="url(#a)"/>
+  <text class="b" x="450" y="205">I2C 0x36 to CM5 / touch bus</text>
+
+  <!-- backlight boost -->
+  <rect class="box" x="490" y="252" width="255" height="68" rx="4"/>
+  <text class="h mid" x="617" y="276">Panel backlight boost</text>
+  <text class="b mid" x="617" y="294">3.3 V to ~12 V</text>
+  <text class="b mid" x="617" y="310">to panel LED string (part verify)</text>
+
+  <path class="ln" d="M710,150 V252" marker-end="url(#a)"/>
+  <text class="b" x="716" y="205">3V3</text>
+
+  <text class="b" x="20" y="360">Two Injoinic power-bank SoCs split the job: IP5306 charges the cell from USB-C, IP5310 boosts it to the CM5 5 V rail.</text>
+  <text class="b" x="20" y="378">Both are turn-key battery-management parts; the exact division of charge, path and protection is not confirmable from the PDF [s16][s18].</text>
+</svg>

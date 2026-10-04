@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 760 480" width="760" height="480" role="img" aria-labelledby="fig5t fig5d">
+  <title id="fig5t">DPI frame timing and single-ended signal-integrity cheat sheet</title>
+  <desc id="fig5d">Left: the 720 by 720 panel timing from the device-tree overlay. A 35 MHz pixel clock drives 720 active pixels per line with horizontal front, sync and back porches of 44, 2 and 46, and 720 active lines per frame with vertical porches of 16, 2 and 18; DE, HSYNC and VSYNC are active-high and the format is RGB666. Right: a stylised PCB cross-section showing the single-ended DPI bundle with PCLK as the reference and a continuous ground plane. DPI has no embedded clock and no deskew, so a setup or hold failure shows up as colour speckle or a shifted image rather than a clean link failure.</desc>
+  <style>
+    text{fill:#1a1a1a;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+    .ttl{font-size:15px;font-weight:700}
+    .h{font-size:13px;font-weight:600}
+    .b{font-size:12px}
+    .box{fill:#ffffff;stroke:#1a1a1a;stroke-width:1.6}
+    .seg{fill:#ffffff;stroke:#1a1a1a;stroke-width:1.2}
+    .segA{fill:#1f6feb;fill-opacity:0.10;stroke:#1f6feb;stroke-width:1.2}
+    .wf{stroke:#1a1a1a;stroke-width:1.4;fill:none}
+    .ln{stroke:#1a1a1a;stroke-width:1.5;fill:none}
+    .board{fill:#1a1a1a;fill-opacity:0.05;stroke:#1a1a1a;stroke-width:1.2}
+    .mid{text-anchor:middle}
+    .accent{fill:#1f6feb}
+    .acc{stroke:#1f6feb;stroke-width:1.6;fill:none}
+  </style>
+  <rect width="760" height="480" fill="#ffffff"/>
+
+  <text class="ttl" x="20" y="24">DPI timing + single-ended signal-integrity cheat sheet</text>
+
+  <!-- ===== LEFT: horizontal timing ===== -->
+  <text class="h" x="25" y="62">Horizontal - 44 / 2 / 46, active-high sync</text>
+  <rect class="segA" x="60" y="108" width="270" height="30"/>
+  <rect class="seg" x="330" y="108" width="35" height="30"/>
+  <rect class="seg" x="365" y="108" width="10" height="30"/>
+  <rect class="seg" x="375" y="108" width="35" height="30"/>
+  <text class="b mid" x="195" y="128">720 active pixels</text>
+  <text class="b mid" x="347" y="102">44</text>
+  <text class="b mid" x="370" y="102">2</text>
+  <text class="b mid" x="392" y="102">46</text>
+
+  <polyline class="wf" points="60,176 60,156 330,156 330,176 410,176"/>
+  <text class="b" x="25" y="170">DE</text>
+  <polyline class="wf" points="48,210 365,210 365,226 375,226 375,210 410,210"/>
+  <text class="b" x="25" y="222">HSYNC</text>
+
+  <polyline class="wf" points="60,252 60,244 68,244 68,260 76,260 76,244 84,244 84,260 92,260 92,244 100,244"/>
+  <text class="b" x="112" y="258">PCLK 35 MHz pixel clock</text>
+
+  <!-- ===== LEFT: vertical timing ===== -->
+  <text class="h" x="25" y="296">Vertical - 16 / 2 / 18, active-high sync</text>
+  <rect class="segA" x="60" y="308" width="46" height="72"/>
+  <rect class="seg" x="60" y="380" width="46" height="14"/>
+  <rect class="seg" x="60" y="394" width="46" height="5"/>
+  <rect class="seg" x="60" y="399" width="46" height="16"/>
+  <text class="b" x="118" y="322">active 720 lines</text>
+  <text class="b" x="118" y="344">front porch 16</text>
+  <text class="b" x="118" y="366">sync 2</text>
+  <text class="b" x="118" y="388">back porch 18</text>
+  <text class="b" x="118" y="410">active-high HS / VS / DE</text>
+
+  <!-- ===== RIGHT: cross-section ===== -->
+  <line x1="440" y1="46" x2="440" y2="430" stroke="#1a1a1a" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <text class="h" x="458" y="62">PCB cross-section - single-ended DPI bundle</text>
+
+  <rect class="accent" x="486" y="104" width="14" height="10"/>
+  <text class="b" x="506" y="113">PCLK (reference)</text>
+  <rect x="620" y="104" width="14" height="10" fill="#1a1a1a"/>
+  <text class="b" x="640" y="113">data / control</text>
+
+  <rect class="board" x="470" y="150" width="265" height="45"/>
+  <rect class="accent" x="485" y="138" width="16" height="12"/>
+  <rect x="520" y="138" width="16" height="12" fill="#1a1a1a"/>
+  <rect x="555" y="138" width="16" height="12" fill="#1a1a1a"/>
+  <rect x="590" y="138" width="16" height="12" fill="#1a1a1a"/>
+  <rect x="625" y="138" width="16" height="12" fill="#1a1a1a"/>
+  <rect x="660" y="138" width="16" height="12" fill="#1a1a1a"/>
+  <line x1="470" y1="195" x2="735" y2="195" stroke="#1a1a1a" stroke-width="4"/>
+  <text class="b" x="470" y="216">continuous GND reference plane under the DPI bundle</text>
+
+  <text class="b" x="458" y="248">Single-ended parallel CMOS - not differential pairs.</text>
+  <text class="b" x="458" y="270">PCLK is the timing reference for the whole bundle.</text>
+  <text class="b" x="458" y="292">Match data and control trace lengths to PCLK.</text>
+  <text class="b" x="458" y="314">Keep the PCLK return path continuous.</text>
+  <text class="b" x="458" y="336">Route away from the PCIe and USB 3.0 pairs.</text>
+  <text class="b" x="458" y="358">No embedded clock and no deskew: setup/hold failure</text>
+  <text class="b" x="458" y="376">shows as colour speckle or a shifted image, not a</text>
+  <text class="b" x="458" y="394">clean link failure.</text>
+
+  <text class="b" x="458" y="424">35 MHz - 720x720 - RGB666 - Y17B driver.</text>
+  <text class="b" x="458" y="442">Not to scale.</text>
+</svg>
