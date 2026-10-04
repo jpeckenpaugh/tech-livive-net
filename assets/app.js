@@ -104,8 +104,8 @@
     var groups = [];
     posts.forEach(function (p) {
       var g = groups[groups.length - 1];
-      if (!g || g.week !== p.week) {
-        g = { week: p.week, items: [] };
+      if (!g || g.week !== p.week || g.month !== p.month) {
+        g = { week: p.week, month: p.month, monthName: p.monthName, items: [] };
         groups.push(g);
       }
       g.items.push(p);
@@ -114,7 +114,7 @@
     var body = groups
       .map(function (g) {
         return (
-          '<h2 class="week">Week ' + g.week + " &middot; August 2026</h2>" +
+          '<h2 class="week">' + g.monthName + " &middot; Week " + g.week + "</h2>" +
           '<ul class="posts">' + g.items.map(postListItem).join("") + "</ul>"
         );
       })
